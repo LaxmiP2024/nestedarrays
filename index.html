@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // write a program to find the middle number in the matrix
+      let a = [
+        [2, 3, 1],
+        [3, 5, 1],
+        [7, 8, 9],
+      ];
+      let reqValue = 0;
+      for (i = 0; i < a.length; i++) {
+        for (j = 0; j < a[i].length; j++) {
+          if (i == 1 && j == 1) {
+            reqValue = a[i][j];
+          }
+        }
+      }
+      console.log(reqValue);
+
+      //   write a program to multiply all the elements in the array with the given number
+
+      let input = [
+        [2, 3, 1],
+        [3, 5, 1],
+        [7, 8, 9],
+      ];
+      let num = 2;
+      let emp = [];
+      let b = [];
+      for (i = 0; i < input.length; i++) {
+        for (j = 0; j < input[i].length; j++) {
+          a[i][j] = a[i][j] * num;
+        }
+      }
+      console.log(a);
+
+      //   write a program to return the count of primes in the given array include repeated numbers also
+      
+      let arr = [
+        [2, 3, 1],
+        [3, 5, 1],
+        [7, 8, 9],
+      ];
+      let primeCount = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+          let num = arr[i][j];
+          let isPrime = true;
+          if (num < 2) {
+            isPrime = false; 
+          } else {
+            for (let k = 2; k <= Math.sqrt(num); k++) {
+              if (num % k === 0) {
+                isPrime = false;
+                break;
+              }
+            }
+          }
+          if (isPrime) {
+            primeCount++;
+          }
+        }
+      }
+      console.log(primeCount);
+    </script>
+  </body>
+</html>
